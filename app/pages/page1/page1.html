@@ -1,0 +1,43 @@
+<ion-navbar *navbar>
+  <!--<ion-title>Lists</ion-title>-->
+</ion-navbar>
+
+<ion-content padding class="page1" style="background-color:#FFFFFF;">
+  <h2>Welcome to Ionic!</h2>
+  
+  <ion-list>
+  <!--<ion-item-sliding >-->
+    <button ion-item class="big" *ngFor="#p of myData" longPress (click)="clicked(p)" >
+      <!--<ion-avatar item-left>
+        <img src="img/slimer.png">
+      </ion-avatar>-->
+      <h2>{{p.name}}</h2>
+       <ion-icon item-right name="ios-arrow-forward-outline"></ion-icon>
+    </button>
+    <!--<ion-item-options>
+      <button primary>
+        <ion-icon name="text"></ion-icon>
+        Text
+      </button>
+      <button secondary>
+        <ion-icon name="call"></ion-icon>
+        Call
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>-->
+</ion-list>
+  
+ <button buti fab fab-bottom fab-center (click)="openModal()">
+        <ion-icon name='add'></ion-icon>
+    </button>
+  
+  <!--<ul>-->
+      
+      
+      
+<!--      
+    <li *ngFor="#p of myData"></li>
+  </ul>
+  <input type="text" #item />
+  <button (click)="add(item.value); item.value = '';">Add Item</button>-->
+</ion-content>
