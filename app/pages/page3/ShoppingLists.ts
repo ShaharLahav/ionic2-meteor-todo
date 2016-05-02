@@ -1,0 +1,1 @@
+export var ShoppingLists = new Mongo.Collection('shoppingLists');

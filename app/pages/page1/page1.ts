@@ -6,6 +6,7 @@ import {NavController, Modal} from 'ionic-angular';
 import {Gesture} from 'ionic-angular/gestures/gesture';
 import {InputModalPage} from '../input-modal/input-modal';
 import {LongPress} from '../../components/long-press/long-press'
+import {Page3} from '../page3/page3'
 
 
 @Page({
@@ -15,9 +16,9 @@ import {LongPress} from '../../components/long-press/long-press'
 export class Page1 extends MeteorComponent {
     public myData: Mongo.Cursor<any>;
 
-    add(item: string) {
-        Lists.insert({ name: item });
-    }
+    // add(item: string) {
+    //     Lists.insert({ name: item });
+    // }
 
     constructor(private nav: NavController) {
         super();
@@ -25,7 +26,8 @@ export class Page1 extends MeteorComponent {
     }
 
     clicked(list) {
-        this.nav.push(InputModalPage);
+        // console.log(list);
+        this.nav.push(Page3,{'l':list._id});
     }
 
     openModal() {

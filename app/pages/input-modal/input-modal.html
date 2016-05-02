@@ -9,7 +9,7 @@
 
 <ion-toolbar>
     <ion-title>
-        Description
+        List Addition
     </ion-title>
     <ion-buttons start>
         <button (click)="dismiss()">
@@ -29,17 +29,17 @@
     <ion-list>
 
         <ion-item>
-            <ion-label floating>Username</ion-label>
-            <ion-input type="text" value=""></ion-input>
+            <ion-label floating>Title</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="title"></ion-input>
         </ion-item>
 
         <ion-item>
-            <ion-label floating>Password</ion-label>
-            <ion-input type="text" value=""></ion-input>
+            <ion-label floating>Description</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="description"></ion-input>
         </ion-item>
 
     </ion-list>
     <div padding>
-        <button buti block>Add</button>
+        <button buti block (click)="clicked()">Add</button>
     </div>
 </ion-content>

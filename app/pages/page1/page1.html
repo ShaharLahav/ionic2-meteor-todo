@@ -7,11 +7,12 @@
   
   <ion-list>
   <!--<ion-item-sliding >-->
-    <button ion-item class="big" *ngFor="#p of myData" longPress (click)="clicked(p)" >
+    <button ion-item class="big" *ngFor="#p of myData" longPress="{{p._id}}" (click)="clicked(p)" >
       <!--<ion-avatar item-left>
         <img src="img/slimer.png">
       </ion-avatar>-->
       <h2>{{p.name}}</h2>
+      <h4 style="color:grey;">{{p.description}}</h4>
        <ion-icon item-right name="ios-arrow-forward-outline"></ion-icon>
     </button>
     <!--<ion-item-options>
